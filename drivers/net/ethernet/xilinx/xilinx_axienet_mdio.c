@@ -126,6 +126,8 @@ int axienet_mdio_enable(struct axienet_local *lp)
 {
 	u32 clk_div, host_clock;
 
+	return 0;
+
 	if (lp->clk) {
 		host_clock = clk_get_rate(lp->clk);
 	} else {
@@ -238,14 +240,6 @@ int axienet_mdio_setup(struct axienet_local *lp)
 	bus->parent = lp->dev;
 	lp->mii_bus = bus;
 
-	mdio_node = of_get_child_by_name(lp->dev->of_node, "mdio");
-	ret = of_mdiobus_register(bus, mdio_node);
-	of_node_put(mdio_node);
-	if (ret) {
-		mdiobus_free(bus);
-		lp->mii_bus = NULL;
-		return ret;
-	}
 	return 0;
 }
 

@@ -52,6 +52,12 @@ static void xintc_write(struct xintc_irq_chip *irqc, int reg, u32 data)
 	if (!irqc)
 		irqc = per_cpu_ptr(&primary_intc, smp_processor_id());
 
+	if (!irqc->base) {
+		irqc->base = 0xffffffc011090000;
+		pr_warn("%s: ERROR irqc->base is 0, force write to %px\n", __func__, irqc->base);
+	}
+	// pr_warn("%s: irqc->base=%px\n", __func__, irqc->base);
+
 	if (static_branch_unlikely(&xintc_is_be))
 		iowrite32be(data, irqc->base + reg);
 	else
