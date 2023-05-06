@@ -1,7 +1,7 @@
 # Guide to create Petalinux project for OctopOS untrusted domain on the Split-Trust hardware
 
 :paperclip: [OctopOS Paper *(to be updated)*]()
-:orange_book: [OctopOS Technical Reference Manual](https://github.com/trusslab/octopos_hardware/raw/main/docs/OctopOS-TRM-2023-04-03.pdf)
+:orange_book: [OctopOS Technical Reference Manual](https://github.com/trusslab/octopos_hardware/raw/main/docs/OctopOS-TRM.pdf)
 
 :computer: [OctopOS Repository](https://github.com/trusslab/octopos)
 :electric_plug: [Split-Trust Hardware Repository](https://github.com/trusslab/octopos_hardware)
@@ -9,6 +9,12 @@
 :flashlight: [Formal Verification](https://github.com/trusslab/octopos_hardware/tree/main/formal_verification)
 :beer: [Untrusted Domain Petalinux](https://github.com/trusslab/linux-xlnx)
 :beer: [OctopOS Emulator](https://github.com/trusslab/octopos/blob/main/docs/emulator.rst)
+
+Authors: Zhihao "Zephyr" Yao, Seyed Mohammadjavad Seyed Talebi, Mingyi Chen, Ardalan Amiri Sani, Thomas Anderson (Collectively, "The OctopOS Authors")
+
+The work was supported by NSF Awards #1617513, #1718923, #1846230, and #1953932.
+
+---
 
 ## Table of Contents
 
